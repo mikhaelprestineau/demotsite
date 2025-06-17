@@ -9,7 +9,7 @@ const Services: React.FC = () => {
     {
       title: 'Strata Cleaning',
       description: 'Professional cleaning for common areas, lobbies, and shared spaces in strata properties.',
-      image: 'https://images.pexels.com/photos/4101135/pexels-photo-4101135.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+      image: 'https://getblastedsydney.com.au/wp-content/uploads/2023/09/Image-1080x675.jpeg',
       services: [
         'Common Area Cleaning (lobbies, hallways, foyers)',
         'Stairwell and Lift Cleaning',
@@ -26,7 +26,7 @@ const Services: React.FC = () => {
     {
       title: 'Commercial Office Cleaning',
       description: 'Keep your workplace pristine with our professional office cleaning services.',
-      image: 'https://images.pexels.com/photos/3770838/pexels-photo-3770838.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+      image: 'https://img.freepik.com/free-photo/full-shot-men-cleaning-office_23-2149345516.jpg?semt=ais_hybrid&w=740',
       services: [
         'Daily/Weekly General Cleaning',
         'Desk and Surface Sanitization',
@@ -44,7 +44,7 @@ const Services: React.FC = () => {
     {
       title: 'End of Lease Cleaning',
       description: 'Ensure your bond return with our thorough end of lease cleaning services.',
-      image: 'https://images.pexels.com/photos/4108721/pexels-photo-4108721.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+      image: 'https://australcleaning.com.au/wp-content/uploads/2023/06/end-of-lease-cleaning.jpg',
       services: [
         'Deep Kitchen Cleaning (oven, stove, range hood, cupboards)',
         'Bathroom Detailing (tiles, grout, shower screens, taps)',
@@ -62,7 +62,7 @@ const Services: React.FC = () => {
     {
       title: 'Window Cleaning',
       description: 'Crystal clear windows with our professional window cleaning services.',
-      image: 'https://images.pexels.com/photos/3768918/pexels-photo-3768918.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+      image: 'https://insights.workwave.com/wp-content/uploads/2020/05/window-washing-picture-id162337648.jpg',
       services: [
         'Interior Window Cleaning',
         'Exterior Window Washing',
@@ -79,7 +79,7 @@ const Services: React.FC = () => {
     {
       title: 'Carpet & Floor Cleaning',
       description: 'Rejuvenate your carpets and floors with our specialized cleaning services.',
-      image: 'https://images.pexels.com/photos/5591579/pexels-photo-5591579.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+      image: 'https://www.tileandgroutcleaningprosgilbert.com/uploads/1/3/3/6/133687395/tile-and-grout-cleaning-gilbert-carpet-cleaning-2-orig_orig.jpg',
       services: [
         'Carpet Vacuuming',
         'Carpet Steam Cleaning',

@@ -13,7 +13,7 @@ const Home: React.FC = () => {
     {
       title: 'Strata Cleaning',
       description: 'Professional cleaning for common areas, lobbies, and shared spaces in strata properties.',
-      image: 'https://images.pexels.com/photos/4101135/pexels-photo-4101135.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+      image: 'https://i.pinimg.com/736x/8b/0a/de/8b0ade23b0f40b29d27e7f8199e23c2d.jpg',
       features: [
         { text: 'Common Area Cleaning' },
         { text: 'Garbage Room Cleaning' },
@@ -24,7 +24,7 @@ const Home: React.FC = () => {
     {
       title: 'Commercial Office Cleaning',
       description: 'Keep your workplace pristine with our professional office cleaning services.',
-      image: 'https://images.pexels.com/photos/3770838/pexels-photo-3770838.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+      image: 'https://i.pinimg.com/736x/fa/7c/a2/fa7ca2cf0d2aead2b70203a1940c5fb0.jpg',
       features: [
         { text: 'Daily/Weekly General Cleaning' },
         { text: 'Desk and Surface Sanitization' },
@@ -35,7 +35,7 @@ const Home: React.FC = () => {
     {
       title: 'End of Lease Cleaning',
       description: 'Ensure your bond return with our thorough end of lease cleaning services.',
-      image: 'https://images.pexels.com/photos/4108721/pexels-photo-4108721.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+      image: 'https://i.pinimg.com/736x/d1/3b/a1/d13ba1f020506ddbaf42a97c5f069d12.jpg',
       features: [
         { text: 'Deep Kitchen Cleaning' },
         { text: 'Bathroom Detailing' },
@@ -80,11 +80,11 @@ const Home: React.FC = () => {
               </Link>
             </div>
             <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-green-400/20 to-blue-500/20 rounded-xl blur-md"></div>
+              <div className="absolute  inset-0 bg-gradient-to-r from-green-400/20 to-blue-500/20 rounded-xl blur-md"></div>
               <img 
-                src="https://images.pexels.com/photos/7605945/pexels-photo-7605945.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+                src="https://i.pinimg.com/736x/45/0e/b6/450eb6cd5b7561f71391f9d5eef7daa2.jpg" 
                 alt="Cleaning team" 
-                className="relative rounded-xl shadow-2xl border border-gray-800"
+                className="relative rounded-xl shadow-2xl border ml-8 border-gray-800"
               />
             </div>
           </div>

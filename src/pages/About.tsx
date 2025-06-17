@@ -49,7 +49,7 @@ const About: React.FC = () => {
           <div className="relative">
             <div className="absolute inset-0 bg-gradient-to-r from-green-400/20 to-blue-500/20 rounded-xl blur-md"></div>
             <img 
-              src="https://images.pexels.com/photos/3757055/pexels-photo-3757055.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+              src="https://i.pinimg.com/736x/64/2d/c3/642dc395a551d97f4c84523c4dde6df9.jpg" 
               alt="Cleaning team" 
               className="relative rounded-xl w-full h-[400px] object-cover border border-gray-800"
             />

@@ -11,49 +11,49 @@ const Gallery: React.FC = () => {
       id: 1,
       category: 'commercial',
       title: 'Office Cleaning',
-      image: 'https://images.pexels.com/photos/3760529/pexels-photo-3760529.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQg6vWMxYqTqY8m_mpu5xxIp9j44Pxa0pbqjA&s',
     },
     {
       id: 2,
       category: 'commercial',
       title: 'Lobby Maintenance',
-      image: 'https://images.pexels.com/photos/4626375/pexels-photo-4626375.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoRMwL1ynBcJd4E62TFJayYDhFeYN07Zc8nQ&s',
     },
     {
       id: 3,
       category: 'residential',
       title: 'Kitchen Deep Clean',
-      image: 'https://images.pexels.com/photos/4107274/pexels-photo-4107274.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsCOdUH0mJhZnT4BVqTNA2hW1afIXTxaXJiQ&s',
     },
     {
       id: 4,
       category: 'residential',
       title: 'Bathroom Sanitizing',
-      image: 'https://images.pexels.com/photos/4099354/pexels-photo-4099354.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMs7Q73z2Q1GQjfS0H-nLmgUZoJ9NgMHJUDA&s',
     },
     {
       id: 5,
       category: 'window',
       title: 'Window Cleaning',
-      image: 'https://images.pexels.com/photos/3770078/pexels-photo-3770078.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+      image: 'https://i.pinimg.com/736x/2b/85/e6/2b85e6f338956376ef93a83749292079.jpg',
     },
     {
       id: 6,
       category: 'strata',
       title: 'Common Area Maintenance',
-      image: 'https://images.pexels.com/photos/4099042/pexels-photo-4099042.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+      image: 'https://i.pinimg.com/736x/3c/e3/a8/3ce3a84d819aac368ec86a3117d0fc04.jpg',
     },
     {
       id: 7,
       category: 'carpet',
       title: 'Carpet Steam Cleaning',
-      image: 'https://images.pexels.com/photos/4107112/pexels-photo-4107112.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+      image: 'https://i.pinimg.com/736x/e9/55/d5/e955d5bd50b763d65efc51426dab0319.jpg',
     },
     {
       id: 8,
       category: 'floor',
       title: 'Floor Polishing',
-      image: 'https://images.pexels.com/photos/4107275/pexels-photo-4107275.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+      image: 'https://i.pinimg.com/736x/85/07/53/850753cb39daa47c83f046557e1a64c1.jpg',
     },
   ];
 
@@ -61,14 +61,14 @@ const Gallery: React.FC = () => {
     {
       id: 'ba1',
       title: 'Office Transformation',
-      before: 'https://images.pexels.com/photos/3938022/pexels-photo-3938022.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-      after: 'https://images.pexels.com/photos/3760529/pexels-photo-3760529.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+      before: './before_office.png',
+      after: './after_office.png',
     },
     {
       id: 'ba2',
       title: 'Kitchen Makeover',
-      before: 'https://images.pexels.com/photos/4098525/pexels-photo-4098525.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-      after: 'https://images.pexels.com/photos/4107274/pexels-photo-4107274.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+      before: './before_kitchen.png',
+      after: './after_kitchen.png',
     },
   ];
 
