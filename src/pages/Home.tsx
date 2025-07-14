@@ -59,11 +59,11 @@ const Home: React.FC = () => {
             <div>
               <h2 className="text-3xl font-bold mb-6">
                 <span className="bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text text-transparent">
-                  Sydney's Trusted Cleaning Experts
+                  Australia's Trusted Cleaning Experts
                 </span>
               </h2>
               <p className="text-gray-300 mb-6">
-                Mikhael Prestine is a Sydney-based cleaning company founded by four friends with a passion for excellence. 
+                Mikhael Prestine is a Australia-based cleaning company founded by four friends with a passion for excellence. 
                 What began as part-time cleaning work has grown into a trusted service known for attention to detail, 
                 reliability, and a personal touch.
               </p>
@@ -181,7 +181,7 @@ const Home: React.FC = () => {
             />
             <TestimonialCard
               name="Sarah L"
-              location="Sydney CBD"
+              location="Australia CBD"
               quote="Incredibly thorough and professional. They transformed our office space and the attention to detail was outstanding. Highly recommend their commercial cleaning services!"
             />
             <TestimonialCard

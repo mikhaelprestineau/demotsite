@@ -23,11 +23,11 @@ const HeroSection: React.FC = () => {
             <span className="bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text text-transparent">
               Strata & Commercial Cleaning
             </span>
-            <span className="block text-white mt-2">in Sydney</span>
+            <span className="block text-white mt-2">in Australia</span>
           </h1>
           
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Sydney-based cleaning company founded by four friends with a passion for excellence. 
+            Australia-based cleaning company founded by four friends with a passion for excellence.
             We specialize in residential, commercial, and Airbnb cleaning, treating every space like our own.
           </p>
           

@@ -1,3 +1,4 @@
+// /src/pages/Contact.tsx
 import React, { useState } from 'react';
 import SectionHeading from '../components/SectionHeading';
 import GlassCard from '../components/GlassCard';
@@ -20,7 +21,7 @@ const Contact: React.FC = () => {
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
     // Validate form
@@ -31,19 +32,44 @@ const Contact: React.FC = () => {
     
     setIsSubmitting(true);
     setSubmitError('');
-    
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false);
+    setSubmitSuccess(false);
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const result = await response.json();
+
+      if (!response.ok || !result.success) {
+        // If the API returns an error, display it
+        throw new Error(result.error || 'An unknown error occurred.');
+      }
+
+      // Handle success
       setSubmitSuccess(true);
       setFormData({ name: '', email: '', phone: '', message: '' });
-      
+
       // Reset success message after 5 seconds
       setTimeout(() => {
         setSubmitSuccess(false);
       }, 5000);
-    }, 1500);
+
+    } catch (error : unknown) {
+      if (error instanceof Error) {
+        setSubmitError(error.message);
+      } else {
+        setSubmitError('Failed to send message. Please try again later.');
+      }
+    } finally {
+      setIsSubmitting(false);
+    }
   };
+
 
   return (
     <div className="pt-20">
@@ -81,10 +107,12 @@ const Contact: React.FC = () => {
                   <div className="h-12 w-12 rounded-full bg-green-400/20 flex items-center justify-center mr-4">
                     <Phone className="h-6 w-6 text-green-400" />
                   </div>
-                  <div>
-                    <h3 className="text-lg font-medium text-white mb-1">Phone</h3>
-                    <p className="text-gray-300">0415 123 456</p>
-                  </div>
+         <div className=" items-center flex flex-col gap-x-1 text-white">
+        <h3 className="text-lg font-medium text-white mb-1">Phone Numbers</h3>
+          <span>0406443589</span> 
+          <span>0488969388</span> 
+          <span>0477364935</span>
+           </div>
                 </div>
                 
                 <div className="flex items-start">
@@ -93,7 +121,7 @@ const Contact: React.FC = () => {
                   </div>
                   <div>
                     <h3 className="text-lg font-medium text-white mb-1">Email</h3>
-                    <p className="text-gray-300">info@mikhaelprestine.com.au</p>
+                    <p className="text-gray-300">emmanuel@mikhaelprestine.com.au</p>
                   </div>
                 </div>
                 
@@ -113,7 +141,7 @@ const Contact: React.FC = () => {
                   </div>
                   <div>
                     <h3 className="text-lg font-medium text-white mb-1">Business Hours</h3>
-                    <p className="text-gray-300">Monday - Friday: 8am - 6pm</p>
+                    <p className="text-gray-300">Monday - Friday: 8am - 9pm</p>
                     <p className="text-gray-300">Saturday: 9am - 4pm</p>
                     <p className="text-gray-300">Sunday: Closed</p>
                   </div>

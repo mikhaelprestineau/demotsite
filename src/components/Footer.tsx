@@ -10,7 +10,7 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="text-xl font-bold mb-4 text-white">Mikhael Prestine</h3>
             <p className="mb-4 text-gray-400">
-              Professional cleaning services in Sydney, treating every space like our own.
+              Professional cleaning services in Australia, treating every space like our own.
             </p>
             <p className="text-sm text-gray-500">ABN: 52332299016</p>
           </div>
@@ -76,20 +76,28 @@ const Footer: React.FC = () => {
             <h3 className="text-xl font-bold mb-4 text-white">Contact Us</h3>
             <ul className="space-y-3">
               <li className="flex items-center">
-                <Phone className="h-5 w-5 text-green-400 mr-2" />
-                <span className="text-gray-400">0415 123 456</span>
-              </li>
-              <li className="flex items-center">
-                <Mail className="h-5 w-5 text-green-400 mr-2" />
-                <span className="text-gray-400">info@mikhaelprestine.com.au</span>
+        <Phone className="h-5 w-5 text-green-400 mr-3 flex-shrink-0" />
+        
+  
+        <div className=" items-center flex flex-col gap-x-1 text-gray-400">
+          <span>0406443589</span>
+          
+          <span>0488969388</span>
+         
+          <span>0477364935</span>
+        </div>
+      </li>
+              <li className="flex items-center gap-1 text-green-400">
+                <Mail size={30} />
+                <span className="text-gray-400">emmanuel@mikhaelprestine.com.au</span>
               </li>
               <li className="flex items-center">
                 <MapPin className="h-5 w-5 text-green-400 mr-2" />
-                <span className="text-gray-400">Sydney, NSW</span>
+                <span className="text-gray-400">Australia, NSW</span>
               </li>
-              <li className="flex items-center">
+              <li className="flex items-center gap-1">
                 <Clock className="h-5 w-5 text-green-400 mr-2" />
-                <span className="text-gray-400">Mon - Fri: 8am - 6pm</span>
+                <span className="text-gray-400">Mon - Fri: 8am - 9pm</span>
               </li>
             </ul>
             <div className="flex mt-4 space-x-4">
