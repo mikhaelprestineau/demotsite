@@ -35,7 +35,7 @@ const Contact: React.FC = () => {
     setSubmitSuccess(false);
 
     try {
-      const response = await fetch('/api/contact', {
+      const response = await fetch('https://mikhel-api.netlify.app/api/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

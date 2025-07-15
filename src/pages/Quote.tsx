@@ -3,6 +3,8 @@ import SectionHeading from '../components/SectionHeading';
 import GlassCard from '../components/GlassCard';
 import { Send, CheckCircle } from 'lucide-react';
 
+
+
 const Quote: React.FC = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -24,23 +26,44 @@ const Quote: React.FC = () => {
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
-    // Validate form
-    if (!formData.name || !formData.email || !formData.serviceType || !formData.propertyType) {
-      setSubmitError('Please fill out all required fields');
+    // --- 1. Client-side Validation ---
+    if (!formData.name || !formData.email || !formData.phone || !formData.serviceType || !formData.propertyType) {
+      setSubmitError('Please fill out all required fields marked with *');
       return;
     }
+
+    // Check if the API URL is configured (helps with debugging)
+   
     
+    // --- 2. Reset State & Start Submission ---
     setIsSubmitting(true);
     setSubmitError('');
+    setSubmitSuccess(false);
     
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false);
+    // --- 3. API Call with Robust Error Handling ---
+    try {
+      const response = await fetch('https://mikhel-api.netlify.app/api/quote', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const result = await response.json();
+
+      // Robust check: Handle both network errors and application errors from the API
+      if (!response.ok || !result.success) {
+        // Use the specific error message from the API if available
+        throw new Error(result.error || 'An unknown error occurred while submitting the quote.');
+      }
+
+      // --- 4. Handle Success ---
       setSubmitSuccess(true);
-      setFormData({
+      setFormData({ // Reset form on success
         name: '',
         email: '',
         phone: '',
@@ -51,11 +74,22 @@ const Quote: React.FC = () => {
         message: '',
       });
       
-      // Reset success message after 5 seconds
-      setTimeout(() => {
-        setSubmitSuccess(false);
-      }, 5000);
-    }, 1500);
+      // Optional: Hide the success message after a few seconds
+      setTimeout(() => setSubmitSuccess(false), 5000);
+
+    } catch (error: unknown) {
+      // --- 5. Handle Failure ---
+      // Type-safe error handling for TypeScript
+      if (error instanceof Error) {
+        setSubmitError(error.message);
+      } else {
+        setSubmitError('Failed to submit quote. Please try again later.');
+      }
+    } finally {
+      // --- 6. End Submission ---
+      // This always runs, ensuring the button is re-enabled
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -99,13 +133,12 @@ const Quote: React.FC = () => {
               <>
                 <h3 className="text-2xl font-bold text-white mb-6">Tell Us About Your Cleaning Needs</h3>
                 
-                {submitError ? (
+                {submitError && (
                   <div className="bg-red-400/20 border border-red-400 rounded-md p-4 mb-6">
                     <p className="text-red-400">{submitError}</p>
                   </div>
-                ) : null}
-                
-                <form onSubmit={handleSubmit}>
+                )}
+                <form onSubmit={handleSubmit} noValidate>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                     <div>
                       <label htmlFor="name" className="block text-white mb-2">
@@ -217,7 +250,7 @@ const Quote: React.FC = () => {
                       </select>
                     </div>
                     
-                    <div>
+                    <div className="md:col-span-2">
                       <label htmlFor="address" className="block text-white mb-2">
                         Property Address
                       </label>
@@ -232,7 +265,7 @@ const Quote: React.FC = () => {
                     </div>
                   </div>
                   
-                  <div className="mb-6">
+                  <div className="mb-6 md:col-span-2">
                     <label htmlFor="message" className="block text-white mb-2">
                       Additional Details
                     </label>
@@ -250,7 +283,7 @@ const Quote: React.FC = () => {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full px-6 py-3 rounded-md font-medium bg-gradient-to-r from-green-400 to-blue-500 hover:from-green-500 hover:to-blue-600 text-black shadow-lg shadow-green-500/20 hover:shadow-green-500/40 transition-all duration-200 flex items-center justify-center disabled:opacity-70"
+                    className="w-full px-6 py-3 rounded-md font-medium bg-gradient-to-r from-green-400 to-blue-500 hover:from-green-500 hover:to-blue-600 text-black shadow-lg shadow-green-500/20 hover:shadow-green-500/40 transition-all duration-200 flex items-center justify-center disabled:opacity-70 disabled:cursor-not-allowed"
                   >
                     {isSubmitting ? (
                       'Submitting...'
