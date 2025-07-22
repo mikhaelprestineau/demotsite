@@ -45,7 +45,7 @@ const Quote: React.FC = () => {
     
     // --- 3. API Call with Robust Error Handling ---
     try {
-      const response = await fetch('https://mikhel-api.vercel.app/api/quote', {
+      const response = await fetch('https://mikhel-api-zeta.vercel.app/api/quote', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
